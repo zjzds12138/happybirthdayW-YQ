@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#fff7dc" />
+  <meta name="description" content="一封留给特别的人的小小来信：三个秘密，等待亲手发现。" />
+  <title>给你的一封小小来信 ✦</title>
+  <style>
+    :root{--bg:#fff9e9;--paper:#fffef9;--butter:#ffdc71;--yellow:#f7c748;--yellowdeep:#d6a23a;--ink:#6b5135;--muted:#a28b67;--line:#f0dfb4;--pale:#fff3cc;--rose:#eba59c;--leaf:#94a876;--shadow:0 22px 72px rgba(154,113,48,.12),0 5px 18px rgba(155,119,49,.06);--radius:28px}
+    *{box-sizing:border-box}
+    html{min-height:100%;scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 13% 15%,#fff2c3 0,transparent 40%),radial-gradient(ellipse at 92% 83%,#ffe9b6 0,transparent 36%),#fff9e9;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;line-height:1.75;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(#caad7a .8px,transparent .8px);background-size:19px 19px;z-index:0}
+    button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed}button:focus-visible,input:focus-visible{outline:3px solid #d39821;outline-offset:3px}
+    .decor{position:fixed;pointer-events:none;opacity:.75;z-index:0;filter:drop-shadow(0 4px 4px #d8b56922)}
+    .decor svg{display:block;width:100%;height:100%}.decor.a{left:max(2%,calc(50% - 660px));top:10%;width:88px;transform:rotate(-15deg)}
+    .decor.b{right:max(1%,calc(50% - 650px));top:22%;width:112px;transform:rotate(18deg)}
+    .decor.c{left:max(1%,calc(50% - 690px));bottom:8%;width:95px;transform:rotate(15deg)}
+    .decor.d{right:max(2%,calc(50% - 675px));bottom:9%;width:88px;transform:rotate(-10deg)}
+    .app{width:min(100% - 34px,860px);margin:34px auto 54px;position:relative;z-index:1}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 5px 18px}
+    .brand{letter-spacing:.17em;font-size:11px;font-weight:850;color:#a5803c;white-space:nowrap}.brand .spark{color:#eeaf44;margin-right:8px;font-size:18px}
+    .reset{border:1px solid #e8d8b4;background:#fffaf0cc;color:#987949;border-radius:99px;padding:7px 15px;font-size:12px;transition:.2s}
+    .reset:hover{background:white;transform:translateY(-1px)}
+    .sheet{position:relative;background:var(--paper);border:1px solid #f0dfa9;border-radius:34px;box-shadow:var(--shadow);overflow:hidden}
+    .sheet::before{content:"";position:absolute;inset:11px;border:1px solid #f1e4c8;border-radius:27px;pointer-events:none}
+    .sheet::after{content:"✳";position:absolute;right:30px;top:12px;font-size:25px;color:#efdbad;pointer-events:none}
+    .paper-top{height:12px;background:repeating-linear-gradient(90deg,#fbd47a 0 37px,#fff3ce 37px 74px,#f7e6ac 74px 111px,#fff9e8 111px 148px);opacity:.8}
+    .content{position:relative;padding:44px 58px 36px;min-height:465px}
+    .view{animation:rise .52s cubic-bezier(.18,.65,.22,1) both}@keyframes rise{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+    .eyebrow{font-size:11px;letter-spacing:.18em;color:#b18b44;font-weight:800}
+    .tag{display:inline-flex;align-items:center;gap:6px;border:1px solid #f0dfaf;background:#fff8df;padding:5px 12px;border-radius:99px;font-size:12px;color:#a27d3c;font-weight:700}
+    h1,h2,h3,p{margin:0}h1,h2{font-weight:850;letter-spacing:.03em}
+    h1{font-size:clamp(29px,5vw,45px);line-height:1.42}h2{font-size:clamp(25px,4vw,33px);line-height:1.45}
+    .serif{font-family:"Songti SC","STSong","Noto Serif CJK SC",serif}
+    .soft{color:var(--muted)}
+    .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:24px;min-height:364px}
+    .intro-copy{position:relative;z-index:1}.intro-copy .tag{margin-bottom:22px}.intro-copy h1{margin-bottom:16px}.intro-copy p{color:#927b59;font-size:15px;max-width:360px}
+    .intro-copy .little-note{margin:24px 0 24px;font-size:13px;color:#a68b65;display:flex;align-items:center;gap:10px}
+    .yellow-btn{border:1px solid #e7ba52;background:linear-gradient(180deg,#ffe38d 0%,#ffd15b 100%);color:#644721;box-shadow:0 5px 0 #e8b94b,0 10px 22px #deba6330;border-radius:16px;font-weight:850;padding:13px 24px;transition:transform .2s,box-shadow .2s,filter .2s;display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:50px;user-select:none}
+    .yellow-btn:not(:disabled):hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 7px 0 #e8b94b,0 12px 22px #deba633b}.yellow-btn:not(:disabled):active{transform:translateY(3px);box-shadow:0 2px 0 #e8b94b}
+    .yellow-btn:disabled{opacity:.58;box-shadow:none;filter:grayscale(.1)}
+    .big{min-width:185px}.arrow{font-size:20px;line-height:1}
+    .art{position:relative;min-height:325px;display:flex;align-items:center;justify-content:center}
+    .art .aura{position:absolute;width:290px;height:290px;border-radius:50%;background:#fff1bd;left:50%;top:50%;transform:translate(-50%,-50%);filter:blur(3px)}
+    .art svg{position:relative;width:min(100%,330px);height:auto;overflow:visible;filter:drop-shadow(0 19px 15px #b48c4940);animation:bob 4.5s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(1deg)}}
+    .q-head{text-align:center;max-width:660px;margin:auto}.q-head .tag{margin-bottom:13px}.q-head h2{margin:11px 0}.q-head p{font-size:14px;color:#9c835e}
+    .steps{display:flex;justify-content:center;align-items:center;gap:0;margin:26px auto 28px;max-width:380px}
+    .step-circle{width:39px;height:39px;border-radius:50%;display:grid;place-items:center;background:#f5edd9;border:1px solid #e7ddc7;color:#b5a58b;font-weight:850;font-size:13px;flex-shrink:0;transition:background .3s}
+    .step-circle.current{background:#ffdc72;color:#745326;border-color:#ecba4e;box-shadow:0 0 0 5px #ffedb9}
+    .step-circle.complete{background:#ffecab;color:#8c662f;border-color:#f1cf7e}
+    .step-line{height:2px;width:70px;background:#e9dec6}.step-line.complete{background:#e8bd61}
+    .question-card{background:#fffcf3;border:1px solid #eedbb2;border-radius:23px;padding:29px 31px 25px;box-shadow:0 8px 30px #d9bd7d14;position:relative;max-width:650px;margin:auto}
+    .question-card::before{content:"";position:absolute;top:-10px;left:35px;width:76px;height:22px;background:#f5dd95a6;transform:rotate(-7deg);border:1px solid #f5e3ad90}
+    .question-card .qid{color:#af8a50;font-size:11px;font-weight:800;letter-spacing:.16em}.question-card .prompt{color:#735a3d;font-size:15px;margin:14px 0 15px}
+    .math-box{padding:17px 12px;margin:17px 0;border:1px dashed #e6cd91;background:#fff8e5;border-radius:16px;text-align:center}
+    .formula-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-family:Georgia,"Times New Roman",serif;font-size:20px;color:#634a2f;line-height:1.5}
+    .math-expression{font-size:clamp(16px,3.3vw,23px);font-weight:650;gap:7px;white-space:normal}.math-expression sub{font-size:.57em;line-height:0;vertical-align:-.35em}    .formula-row+.formula-row{margin-top:14px}.sum{display:inline-flex;flex-direction:column;align-items:center;line-height:1}.sum .sigma{font-size:36px;line-height:1}.sum .limit{font-size:11px;font-family:"PingFang SC",sans-serif;line-height:1.4;font-style:normal}.formula-note{font-size:11px;color:#ad9163;margin-top:13px}
+    .frac{display:inline-flex;flex-direction:column;vertical-align:middle;min-width:30px;line-height:1.15;text-align:center}.frac span:first-child{border-bottom:1.6px solid currentColor;padding:0 3px 4px}.frac span:last-child{padding:4px 3px 0}
+    .character-math{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.char-box{padding:20px 8px;background:#fff3cd;border:1px solid #f1d99c;border-radius:15px;text-align:center;color:#926732;font-size:clamp(20px,4vw,27px);font-family:"Songti SC",serif;font-weight:700}
+    .poem{background:linear-gradient(130deg,#fff5d7,#fff9e8);padding:22px 10px;margin:21px auto;border-radius:17px;border:1px dashed #eacb88;text-align:center;position:relative}.poem p{font-family:"Songti SC","STSong",serif;color:#85613a;font-size:clamp(17px,3.5vw,23px);letter-spacing:.12em;line-height:2.3}.poem::after{content:"✿";position:absolute;color:#e6b94a;right:13px;bottom:4px;font-size:24px}
+    .answer-label{font-size:12px;color:#9e8058;font-weight:750;display:block;margin:19px 0 8px}.answer-row{display:flex;gap:11px}.answer-input{flex:1;min-width:0;min-height:50px;border:1.5px solid #edd9ac;border-radius:14px;background:#fff;color:#6d5035;padding:10px 14px;outline:none;transition:border-color .2s,box-shadow .2s}.answer-input:focus{border-color:#e6b950;box-shadow:0 0 0 4px #ffdf8542}.answer-input::placeholder{color:#b5a48e}
+    .hint-row{display:flex;flex-wrap:wrap;gap:9px;justify-content:space-between;align-items:center;margin-top:15px}.hint-btn{border:0;background:transparent;color:#ac8750;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;font-size:12px;padding:6px 0}.hint-btn:disabled{opacity:.5}.hint-card{background:#fff3cf;border:1px solid #f2d994;border-radius:12px;color:#8d6c3a;font-size:13px;padding:11px 14px;margin-top:10px;animation:rise .28s ease both}
+    .feedback{font-size:13px;min-height:19px;color:#b46d59}.feedback.ok{color:#72916c}.feedback[hidden]{display:none}
+    .complete-wrap{text-align:center;max-width:570px;margin:38px auto 26px}.complete-wrap .sparkle-mark{width:93px;height:93px;display:grid;place-items:center;margin:0 auto 20px;border-radius:50%;background:#ffedb1;font-size:44px;box-shadow:0 0 0 14px #fff5d3}.complete-wrap h2{margin:9px 0 13px}.complete-wrap p{color:#a38861}.complete-stamp{border:1px dashed #ddb45f;padding:12px 20px;border-radius:99px;display:inline-block;margin-top:22px;color:#94713f;font-size:13px;background:#fff8e4}
+    .unlock{background:linear-gradient(180deg,#fff9e9 0,#fff2cd 100%);border-top:1px dashed #e6cb8e;text-align:center;padding:24px 24px 30px;position:relative}
+    .unlock .small{font-size:11px;letter-spacing:.16em;color:#aa8a52;font-weight:800;margin-bottom:10px}.word-slots{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:15px}
+    .slot{display:inline-flex;align-items:center;justify-content:center;padding:6px 12px;min-width:86px;min-height:43px;background:#fffcf6;border:1px solid #eedbb2;border-radius:12px;color:#ad9a7e;font-weight:780;letter-spacing:.035em;font-size:clamp(15px,2.5vw,20px)}.slot.open{background:#ffe7a1;color:#79552a;border-color:#e8bf67;animation:pop .42s ease both}@keyframes pop{0%{transform:scale(.9)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+    .reveal-btn{width:min(100%,490px);min-height:54px;font-size:18px;border-radius:15px;letter-spacing:.035em}.reveal-btn.ready{animation:glow 2.5s ease-in-out infinite}@keyframes glow{50%{box-shadow:0 5px 0 #e7b94d,0 0 0 7px #ffe69b80,0 14px 35px #dcae4938}}
+    .unlock .foot{font-size:12px;color:#a88d64;margin-top:14px}.postscript{text-align:center;color:#b59a70;font-size:11px;letter-spacing:.16em;margin-top:17px}
+    .modal-overlay{position:fixed;inset:0;background:#634c3482;backdrop-filter:blur(7px);z-index:50;display:grid;place-items:center;padding:18px;animation:fade .28s ease both}
+    @keyframes fade{from{opacity:0}to{opacity:1}}.modal-overlay[hidden]{display:none}
+    .gift-sheet{width:min(100%,510px);background:#fffdf5;border:2px solid #f0d99d;border-radius:29px;box-shadow:0 30px 80px #392d1f4b;padding:34px 29px 29px;position:relative;overflow:hidden;text-align:center;max-height:min(94vh,800px);overflow-y:auto}
+    .gift-sheet:before{content:"";position:absolute;inset:10px;border:1px dashed #e8cf91;border-radius:21px;pointer-events:none}
+    .close-modal{position:absolute;right:21px;top:18px;border:0;width:35px;height:35px;border-radius:50%;background:#fff1d4;color:#89693b;font-size:22px;line-height:1;z-index:2}
+    .gift-icon{width:78px;height:78px;background:#ffe9a4;border-radius:50%;display:grid;place-items:center;font-size:39px;margin:0 auto 15px;animation:bob 3s ease-in-out infinite}
+    .gift-sheet h2{font-size:clamp(24px,4vw,30px);margin:7px 0 9px}.gift-sheet .gift-intro{color:#967c57;font-size:14px;margin:0 auto 21px;max-width:340px}
+    .tracking{display:grid;gap:13px;text-align:left}.tracking-card{padding:15px 16px 14px;background:#fff7df;border:1px solid #ebd49b;border-radius:16px;position:relative}
+    .tracking-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;color:#a08252;font-size:12px;font-weight:800}.tracking-number{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;word-break:break-all;font-size:17px;letter-spacing:.035em;color:#755633;font-weight:800;line-height:1.5}.tracking-note{font-size:11px;color:#b49b73}.copy-btn{border:1px solid #e0c183;border-radius:10px;color:#856231;background:#fffefa;padding:4px 11px;font-size:12px}.copy-btn:disabled{opacity:.5}
+    .gift-question{margin-top:25px;font-weight:850;font-size:20px;color:#88602b}.gift-ending{font-size:13px;color:#aa8a5f;margin-top:8px}.gift-stars{color:#e4b64b;letter-spacing:.6em;margin-top:12px}
+    .confetti{position:fixed;z-index:70;left:var(--x);top:-10vh;width:var(--s);height:calc(var(--s)*1.2);background:var(--c);border-radius:2px;pointer-events:none;animation:fall var(--t) ease-in forwards;transform:rotate(var(--r))}@keyframes fall{to{top:110vh;transform:translateX(var(--drift)) rotate(720deg);opacity:0}}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:700px){.app{margin:12px auto 35px;width:min(100% - 18px,620px)}.content{padding:33px 22px 28px;min-height:auto}.intro-grid{grid-template-columns:1fr;gap:0;text-align:center}.intro-copy{order:1}.intro-copy p{margin:auto}.intro-copy .little-note{justify-content:center;margin:16px 0 21px}.art{order:0;min-height:215px}.art .aura{width:205px;height:205px}.art svg{width:220px}.intro-copy .tag{margin-bottom:15px}.intro-copy h1{font-size:29px}.question-card{padding:24px 18px}.answer-row{flex-direction:column}.answer-row .yellow-btn{width:100%}.math-box{padding:14px 3px}.formula-row{font-size:17px;gap:6px}.sum .sigma{font-size:30px}.sum .limit{font-size:10px}.steps{margin:23px auto}.step-line{width:52px}.decor{opacity:.23}.slot{min-width:80px;padding:5px 8px}.reveal-btn{font-size:16px}.unlock{padding:22px 12px 27px}.gift-sheet{padding:31px 22px 25px}}
+    @media(max-width:355px){.content{padding:28px 14px}.math-box .formula-row{font-size:15px}.slot{min-width:70px;font-size:14px}.brand{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="decor a" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M49 84C31 66 19 46 28 26c6-16 21-10 24 3 7-14 22-13 26 1 7 22-18 42-29 54z" fill="#ffd65d" stroke="#cfad51" stroke-width="2"/><path d="M30 26q17 20 20 49M76 30Q59 49 50 75" stroke="#fff5c1" fill="none" stroke-width="4"/></svg></div>
+  <div class="decor b" aria-hidden="true"><svg viewBox="0 0 110 110"><g fill="#fffdf0" stroke="#e7c56a" stroke-width="2"><ellipse cx="55" cy="27" rx="17" ry="23"/><ellipse cx="55" cy="83" rx="17" ry="23"/><ellipse cx="27" cy="55" rx="23" ry="17"/><ellipse cx="83" cy="55" rx="23" ry="17"/><ellipse cx="35" cy="35" rx="17" ry="20" transform="rotate(-45 35 35)"/><ellipse cx="75" cy="75" rx="17" ry="20" transform="rotate(-45 75 75)"/><ellipse cx="75" cy="35" rx="17" ry="20" transform="rotate(45 75 35)"/><ellipse cx="35" cy="75" rx="17" ry="20" transform="rotate(45 35 75)"/></g><circle cx="55" cy="55" r="22" fill="#ffd35e" stroke="#d5a947" stroke-width="2"/></svg></div>
+  <div class="decor c" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M53 5l9 27 28 0-22 17 8 29-23-16-24 16 9-29-22-17h28z" fill="#ffd45b" stroke="#d3ab49" stroke-width="2"/><circle cx="83" cy="87" r="7" fill="#f1afa0"/></svg></div>
+  <div class="decor d" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M24 43c-14-28 13-36 26-9 14-28 40-17 26 9 16 26-11 38-26 10-15 28-43 16-26-10z" fill="#fff4d6" stroke="#e8ca7d" stroke-width="3"/><circle cx="50" cy="43" r="17" fill="#ffd568"/></svg></div>
+
+  <main class="app" id="app">
+    <header class="topbar"><div class="brand"><span class="spark">✳</span> A LITTLE SECRET FOR YOU</div><button class="reset" id="resetBtn" type="button" aria-label="重新开始">↻ 重新开始</button></header>
+    <section class="sheet" aria-label="三道谜题，一封来信"><div class="paper-top"></div>
+      <div class="content" id="screen" aria-live="polite"></div>
+      <footer class="unlock" aria-label="逐步解锁的句子">
+        <div class="small">✦ 一句还没说完的话 ✦</div>
+        <div class="word-slots" id="wordSlots" aria-live="polite"></div>
+        <button id="revealBtn" class="yellow-btn reveal-btn" type="button" disabled aria-disabled="true">先收集三个答案 ⭐</button>
+        <p class="foot" id="unlockFoot">每解开一个秘密，就会有一部分悄悄出现。</p>
+      </footer>
+    </section>
+    <div class="postscript">MADE WITH A LITTLE SUNSHINE & A LOT OF HEART ✿</div>
+  </main>
+
+  <div class="modal-overlay" id="giftOverlay" hidden>
+    <div class="gift-sheet" role="dialog" aria-modal="true" aria-labelledby="giftTitle" aria-describedby="giftDesc">
+      <button class="close-modal" id="closeGift" type="button" aria-label="关闭惊喜">×</button>
+      <div class="gift-icon" aria-hidden="true">🎁</div>
+      <div class="eyebrow">ONE MORE LITTLE SECRET</div>
+      <h2 class="serif" id="giftTitle">诶？这里还有东西！</h2>
+      <p class="gift-intro" id="giftDesc">原来，除了刚刚那句话，<br />我还悄悄藏了两个数字密码。</p>
+      <div class="tracking" id="trackingCards"></div>
+      <div class="gift-question serif">猜猜这些数字有什么用呢～</div>
+      <div class="gift-ending">嘘，先留一点点悬念给你 ☆</div>
+      <div class="gift-stars" aria-hidden="true">✦ ✿ ✦</div>
+    </div>
+  </div>
+
+  <script>
+    "use strict";
+    /**********************************************************************
+     * ★ 使用前只需要修改这里 ★
+     * 将下面的两个空字符串，分别替换为你的两个真实快递单号。
+     * 示例（仅示范写法，请勿直接使用）：trackingNumbers: ["12345678", "87654321"]
+     * 若尚未拿到单号，保留空字符串即可，网页会显示“神秘数字尚未填写”。
+     * 注意：单文件静态网页并不能阻止懂技术的人查看源代码，请勿填入收件地址、手机号。
+     **********************************************************************/
+    const CONFIG = {
+      trackingNumbers: ["G156242", "S439600"]
+    };
+
+    const STORE_KEY = "little-sunshine-secret-v1";
+    const puzzles = [
+      { title:"第一关 · 数字迷宫", subtitle:"有些数字，值得花一点时间去寻找。", kind:"math", answers:["18","十八"], placeholder:"写下你找到的数字…", hints:[
+        "两个对数的底数不一样，能否先把它们换成同一个底数？",
+        "令 t = log₂(x−2)。根据换底公式，log₍ₓ₋₂₎16 = 4/t。",
+        "整理得到 t²−5t+4=0。两个候选值里，别忘了使用 x>6 这个条件。"
+      ]},
+      { title:"第二关 · 消失的文字", subtitle:"有时候，拿走一点点，反而更接近答案。", kind:"hanzi", answers:["生日"], placeholder:"写下你得到的两个字…", hints:[
+        "这一次，减号不是算术符号。",
+        "试着把两个汉字拆成不同的组成部分。",
+        "星 = 日 + 生；明 = 日 + 月。"
+      ]},
+      { title:"第三关 · 诗里的密码", subtitle:"上一关的答案，是打开这一关的钥匙。", kind:"poem", answers:["快乐"], placeholder:"写下最终的两个字…", hints:[
+        "两行诗的字数与取字顺序都有讲究。",
+        "想想上一关两个汉字各有几画。",
+        "“生”有5画，“日”有4画：从两句诗中分别取对应位置的字。"
+      ]}
+    ];
+    let state = {progress:0,started:false,errors:0,hintCount:0};
+    const $ = id=>document.getElementById(id);
+    function loadProgress(){try{const obj=JSON.parse(localStorage.getItem(STORE_KEY)||"null");if(obj&&Number.isInteger(obj.progress)){state.progress=Math.max(0,Math.min(3,obj.progress));state.started=!!obj.started || state.progress>0;}}catch(_){}}
+    function saveProgress(){try{localStorage.setItem(STORE_KEY,JSON.stringify({progress:state.progress,started:state.started}));}catch(_){}}
+    const envelopeArt = `<div class="art" aria-hidden="true"><div class="aura"></div>
+      <svg viewBox="0 0 345 315" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#d5ac58" stroke-width="2"><path d="M36 64l8-11m-11 2l15 3"/><path d="M286 41l7-11m-12 5l17 3"/></g>
+        <path d="M102 68c-23-14-40-1-38 22 1 17 22 26 36 32" fill="#ffe9af" stroke="#d4ae64" stroke-width="2"/>
+        <path d="M250 68c23-14 40-1 38 22-1 17-22 26-36 32" fill="#ffe9af" stroke="#d4ae64" stroke-width="2"/>
+        <path d="M115 93L105 59c-5-20 6-29 22-15l28 27M213 72l28-28c16-14 27-5 22 15l-10 35" fill="#fffdf1" stroke="#d5b174" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M111 88C128 61 221 61 244 88c27 31 15 76-5 85H111c-27-21-25-58 0-85z" fill="#fffef9" stroke="#d5b174" stroke-width="3"/>
+        <ellipse cx="139" cy="124" rx="4" ry="5" fill="#745838"/><ellipse cx="209" cy="124" rx="4" ry="5" fill="#745838"/>
+        <path d="M167 138q7 7 14 0m-7 0v5m-7 0q7 9 14 0" stroke="#745838" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="122" cy="138" rx="13" ry="7" fill="#f6c1a5" opacity=".65"/><ellipse cx="225" cy="138" rx="13" ry="7" fill="#f6c1a5" opacity=".65"/>
+        <rect x="41" y="153" width="266" height="139" rx="17" fill="#fff4d3" stroke="#deb970" stroke-width="3"/>
+        <path d="M41 169l125 89c6 5 12 5 18 0l123-89" fill="#ffebb5" stroke="#deb970" stroke-width="3"/>
+        <path d="M41 282l95-76m171 76l-95-76" stroke="#deb970" stroke-width="3" fill="none"/>
+        <path d="M163 212c-3-12-20-11-20 2 0 13 31 27 31 27s31-14 31-27c0-13-17-14-21-2l-10 8z" fill="#edb8a6" stroke="#cf9b85" stroke-width="1.5"/>
+        <path d="M275 77l8-22 9 23 22 7-21 9-9 22-9-23-23-8z" fill="#ffd666" stroke="#d9af51" stroke-width="2"/>
+        <path d="M34 143l5-16 7 16 16 6-17 6-6 15-6-15-16-6z" fill="#ffdd82" stroke="#d9b663" stroke-width="1.5"/>
+        <g transform="translate(281 240)"><ellipse cx="0" cy="-24" rx="10" ry="18" fill="#fffefa" stroke="#d8b66e"/><ellipse cx="0" cy="24" rx="10" ry="18" fill="#fffefa" stroke="#d8b66e"/><ellipse cx="-24" cy="0" rx="18" ry="10" fill="#fffefa" stroke="#d8b66e"/><ellipse cx="24" cy="0" rx="18" ry="10" fill="#fffefa" stroke="#d8b66e"/><circle cx="0" cy="0" r="15" fill="#ffd666" stroke="#d8b66e"/></g>
+        <g transform="translate(63 286) rotate(-15)"><path d="M0 0Q-19-18-12-34Q3-43 0-20Q8-43 20-31Q24-18 0 0" fill="#9eb786" stroke="#789868" stroke-width="2"/></g>
+      </svg></div>`;
+    function introView(){return `<div class="view intro-grid"><div class="intro-copy"><div class="tag">✿ 一封有点特别的来信</div><h1 class="serif">嘿，<br>有个小秘密<br>想请你发现。</h1><p>三个小小的谜题，藏着一句还没说完的话。准备好动动脑筋了吗？</p><div class="little-note">✦ 不着急，慢慢来。惊喜会等你。</div><button class="yellow-btn big" id="startBtn" type="button">拆开这封信 <span class="arrow">↗</span></button></div>${envelopeArt}</div>`;}
+    function stepView(){return `<div class="steps" aria-label="解谜进度：完成 ${state.progress} 道，共三道">${[0,1,2].map((i)=>`${i?`<div class="step-line ${state.progress>i?'complete':''}"></div>`:""}<span class="step-circle ${i<state.progress?'complete':i===state.progress?'current':''}">${i<state.progress?'✓':('0'+(i+1))}</span>`).join('')}</div>`;}
+    function mathMarkup(){return `<div class="math-box" role="group" aria-label="以 2 为底，x 减 2 的对数，加上以 x 减 2 为底，16 的对数，等于 5；并且 x 大于 6。"><div class="formula-row math-expression"><span>log<sub>2</sub>(x − 2)</span><span>+</span><span>log<sub>x−2</sub>16</span><span>= 5</span></div><div class="formula-note">附加条件：x &gt; 6</div></div>`;}
+    function puzzleBody(){switch(state.progress){case 0:return `<p class="prompt">已知实数 <strong>x &gt; 6</strong>，满足下面的等式，请求出 <strong>x</strong> 的值。</p>${mathMarkup()}`;case 1:return `<p class="prompt">这次的减号，可不一定是在做数学运算哦~</p><div class="character-math"><div class="char-box">星 − 日 = ?</div><div class="char-box">明 − 月 = ?</div></div></p>`;case 2:return `<p class="prompt">上一关的答案，是这一关的钥匙！</p><div class="poem"><p>愿你从此快意乘风</p><p>愿你常乐且自安然</p></div>`;default:return ''}}
+    function questionView(){const q=puzzles[state.progress];return `<div class="view"><div class="q-head"><span class="tag">✦ CHAPTER 0${state.progress+1} / 03</span><h2 class="serif">${q.title}</h2><p>${q.subtitle}</p></div>${stepView()}<div class="question-card"><div class="qid">A SMALL QUESTION FOR YOU</div>${puzzleBody()}<form id="answerForm" autocomplete="off"><label class="answer-label" for="answerInput">你的答案</label><div class="answer-row"><input class="answer-input" id="answerInput" name="answer" enterkeyhint="done" autocomplete="off" spellcheck="false" maxlength="30" placeholder="${q.placeholder}" required aria-describedby="feedback" /><button class="yellow-btn" type="submit">确认答案 <span aria-hidden="true">→</span></button></div></form><div class="hint-row"><button id="hintBtn" class="hint-btn" type="button">✦ 需要一点小提示吗？（${state.hintCount}/3）</button><span class="feedback" id="feedback" role="status" aria-live="polite"></span></div><div id="hintArea"></div></div></div>`;}
+    function completeView(){return `<div class="view"><div class="complete-wrap"><div class="sparkle-mark">✿</div><div class="tag">ALL SECRETS UNLOCKED</div><h2 class="serif">哇，被你全部解开啦！</h2><p>每一道答案，都悄悄变成一句话的一部分。</p><p>不过……故事好像还没有结束。</p><div class="complete-stamp">✦ 最后的惊喜，藏在下面那个按钮里 ✦</div></div></div>`;}
+    function renderSlots(){let parts=[state.progress>=1?"18岁":"？？",state.progress>=2?"生日":"？？",state.progress>=3?"快乐":"？？"];$("wordSlots").innerHTML=parts.map((x,i)=>`<span class="slot ${state.progress>i?'open':''}" aria-label="${state.progress>i?x:'尚未解锁'}">${x}</span>`).join('');const btn=$("revealBtn");btn.disabled=state.progress!==3;btn.setAttribute('aria-disabled',String(state.progress!==3));btn.classList.toggle('ready',state.progress===3);btn.innerHTML=state.progress===3?'18岁生日快乐！ &nbsp; ⭐':'先收集三个答案 ⭐';$("unlockFoot").textContent=state.progress===3?'悄悄点一下，还有一个小惊喜。':`已经解锁 ${state.progress} / 3 个秘密。全部解开后，就能打开这句话啦。`;}
+    function render(){const screen=$("screen");screen.innerHTML=!state.started?introView():state.progress<3?questionView():completeView();renderSlots();if(!state.started){$("startBtn").addEventListener('click',()=>{state.started=true;saveProgress();render();});}else if(state.progress<3){$("answerForm").addEventListener('submit',onAnswer);$("hintBtn").addEventListener('click',nextHint);renderHint();}}
+    function normalize(s){return s.normalize('NFKC').trim().replace(/[\s\u3000，。？！!,.]/g,'');}
+    function onAnswer(event){event.preventDefault();const val=normalize($("answerInput").value);const q=puzzles[state.progress];const feedback=$("feedback");if(q.answers.includes(val)){feedback.textContent=['第一颗星星亮起来啦！','居然被你发现啦！','全部都答对啦，好厉害！'][state.progress];feedback.className='feedback ok';const button=$("answerForm").querySelector('button[type="submit"]');button.disabled=true;button.textContent='回答正确 ✓';const delay=window.matchMedia('(prefers-reduced-motion: reduce)').matches?0:670;window.setTimeout(()=>{state.progress=Math.min(3,state.progress+1);state.errors=0;state.hintCount=0;saveProgress();render();if(state.progress===3)confetti(28);},delay);}else{state.errors++;feedback.textContent=state.errors>=2?'差一点点！可以点开小提示看看～':'唔，再想想看，你可以的。';feedback.className='feedback';$("answerInput").select();}}
+    function nextHint(){if(state.hintCount>=3)return;state.hintCount++;renderHint();}
+    function renderHint(){const b=$("hintBtn");if(!b)return;b.textContent=state.hintCount>=3?'✦ 小提示已全部解锁':`✦ 需要一点小提示吗？（${state.hintCount}/3）`;b.disabled=state.hintCount>=3;const area=$("hintArea");area.innerHTML=puzzles[state.progress].hints.slice(0,state.hintCount).map((s,i)=>`<div class="hint-card">💡 提示 ${i+1}：${s}</div>`).join('');}
+    function makeTrackingCards(){const wrap=$("trackingCards");wrap.replaceChildren();CONFIG.trackingNumbers.slice(0,2).forEach((value,i)=>{const configured=String(value||'').trim().length>0;const card=document.createElement('div');card.className='tracking-card';const head=document.createElement('div');head.className='tracking-head';const name=document.createElement('span');name.textContent=`✦ 第 ${i+1===1?'一':'二'} 串神秘数字`;const copy=document.createElement('button');copy.className='copy-btn';copy.type='button';copy.textContent='复制';copy.disabled=!configured;copy.setAttribute('aria-label',`复制第${i+1}串数字`);copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(String(value));copy.textContent='已复制 ✓';window.setTimeout(()=>{copy.textContent='复制'},1500);}catch(_){copy.textContent='请长按数字复制';}});head.append(name,copy);const number=document.createElement('div');number.className='tracking-number';number.textContent=configured?String(value):'✦ 等待填写的神秘数字 ✦';const note=document.createElement('div');note.className='tracking-note';note.textContent=configured?'这串数字，是一个小小的线索。':'发送前请在 HTML 的 CONFIG 中填入单号。';card.append(head,number,note);wrap.append(card);});}
+    let lastFocusedElement=null;
+    function openGift(){if(state.progress!==3)return;lastFocusedElement=document.activeElement;makeTrackingCards();$("giftOverlay").hidden=false;document.body.style.overflow='hidden';$("closeGift").focus();confetti(34);}
+    function closeGift(){if($("giftOverlay").hidden)return;$("giftOverlay").hidden=true;document.body.style.overflow='';lastFocusedElement?.focus();}
+    function confetti(count){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const colors=['#f6c548','#ffe18d','#e8a7a1','#a7be81','#fff3d1'];for(let i=0;i<count;i++){const bit=document.createElement('span');bit.className='confetti';bit.style.setProperty('--x',`${Math.random()*100}vw`);bit.style.setProperty('--s',`${5+Math.random()*7}px`);bit.style.setProperty('--c',colors[Math.floor(Math.random()*colors.length)]);bit.style.setProperty('--r',`${Math.random()*240}deg`);bit.style.setProperty('--t',`${2.4+Math.random()*2}s`);bit.style.setProperty('--drift',`${-100+Math.random()*200}px`);document.body.append(bit);bit.addEventListener('animationend',()=>bit.remove(),{once:true});}}
+    $("resetBtn").addEventListener('click',()=>{if(state.progress===0&&!state.started)return;if(!window.confirm('要重新开始这场小小的探索吗？已经解锁的进度会清空哦。'))return;state={progress:0,started:false,errors:0,hintCount:0};saveProgress();closeGift();render();window.scrollTo({top:0,behavior:'smooth'});});
+    $("revealBtn").addEventListener('click',openGift);$("closeGift").addEventListener('click',closeGift);$("giftOverlay").addEventListener('click',e=>{if(e.target===$("giftOverlay"))closeGift();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGift();if(!$("giftOverlay").hidden && e.key==='Tab'){const modal=$("giftOverlay");const els=[...modal.querySelectorAll('button:not([disabled])')];const first=els[0],last=els[els.length-1];if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus()}}});
+    loadProgress();render();
+  </script>
+</body>
+</html>
